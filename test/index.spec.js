@@ -2,18 +2,27 @@ import { expect } from 'chai';
 import { createConstants,createReducer } from '../index';
 
 describe('createReducer', () => {
-  it('判断创建的reducer是否正常', () => {
-    var state = undefined;
-
-    var hanlder = {
-      ['a'](state,action){
-        return state
-      }
-    };
+  it('创建的reducer是否可用', () => {
+    var state = undefined,
+        hanlder = {
+          ['a'](state,action){
+            return state
+          }
+        };
 
     var reducers = createReducer(state,hanlder);
-    var a = reducers({"a":1,"b":2},{type:"a",state:"n"});
+    var value = reducers({"a":1,"b":2},{type:"a",state:"n"});
 
-    expect(a).to.be.deep.equal({"a":1,"b":2});
+    expect(value).to.be.deep.equal({"a":1,"b":2});
+  });
+});
+
+describe('createConstants', () => {
+  it('创建的action常量是否正确', () => {
+    var constants = createConstants("SET_STATE","MODIFY_STATE");
+    expect(constants).to.be.deep.equal({
+      "SET_STATE":"SET_STATE",
+      "MODIFY_STATE":"MODIFY_STATE"
+    });
   });
 });
