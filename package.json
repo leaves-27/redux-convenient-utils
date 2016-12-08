@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register"
   },
+  "repository":"https://github.com/leaves-27/redux-convenient-utils.git",
   "author": "冬阳",
   "keywords": [
     "createConstants",
