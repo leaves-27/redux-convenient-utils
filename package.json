@@ -1,6 +1,6 @@
 {
   "name": "redux-convenient-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "用来创建redux的Reducer和action常量",
   "main": "index.js",
   "scripts": {
