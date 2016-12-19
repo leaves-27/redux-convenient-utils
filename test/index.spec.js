@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { createConstants,createReducer } from '../index';
+import { createConstants,createReducer } from '../lib/index';
 
 describe('createReducer', () => {
   it('创建的reducer是否可用', () => {
